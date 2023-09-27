@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Calculadora de Equação Quadrática</title>
+ <title>Calculadora de bhaskara</title>
 </head>
 <body>
-    <h1>Calculadora de Equação Quadrática</h1>
+    <h1>Calculadora de bhaskara</h1>
 
     <form>
-        <label for="a">Valor de A:</label>
+        <label for="a">A:</label>
         <input type="number" id="a" required>
         <br>
 
-        <label for="b">Valor de B:</label>
+        <label for="b">B:</label>
         <input type="number" id="b" required>
         <br>
 
-        <label for="c">Valor de C:</label>
+        <label for="c">C:</label>
         <input type="number" id="c" required>
         <br>
-
+        <input type="reset" value="limpar">
         <input type="button" value="Calcular" onclick="calcularEquacao()">
+        <input type="checkbox" name="button" id="ok">
     </form>
 
-    <div id="result" style="margin-top: 20px;"></div>
+    <div id="resultado" style="margin-top: 20px;"></div>
 
     <script>
         function calcularEquacao() {
@@ -45,10 +46,10 @@
                 x2 = `${realPart} - ${imaginaryPart}i`;
             }
 
-            const resultDiv = document.getElementById('result');
+            const resultDiv = document.getElementById('resultado');
             resultDiv.innerHTML = `
-                <p>Valor de X': ${x1}</p>
-                <p>Valor de X'': ${x2}</p>
+                <p>Valor de X1': ${x1}</p>
+                <p>Valor de X2'': ${x2}</p>
             `;
         }
     </script>
